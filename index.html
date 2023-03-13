@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پروژه فروشگاهی</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="p-4">
+    <!-- header section -->
+    <header>
+        <!-- PC view -->
+        <div class="header-container">
+            <div class="container">
+                <div class="row pc-view">
+                    <!-- logo -->
+                    <div class="col-lg-2 col-12">MasterCoders</div>
+                    <!-- navbar items -->
+                    <div class="col-lg-7 d-none d-lg-block">
+                        <ul class="list-container">
+                            <li><a href="#">تماس با ما</a></li>
+                            <li><a href="#">درباره ما</a></li>
+                            <li><a href="#">محصولات</a></li>
+                            <li><a href="#">تخفیفات</a></li>
+                            <li><a href="#">رویداد</a></li>
+                        </ul>
+                    </div>
+                    <!-- login-search-cart section -->
+                    <div class="col-lg-3 d-none d-lg-flex flex-row-reverse">
+                        <div><a href="#" class="mx-3">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </a></div>
+                        <div><a href="register.html" class="mx-3">
+                                <i class="fa-solid fa-circle-user"></i>
+                            </a></div>
+                        <div><a href="#" class="mx-3">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <!-- Swiper -->
+                    <div class="swiper swiper-1 mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="images/slider-img-1.jpg" id="swiper-image-1" alt="slider image 1">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="images/slider-img-2.jpg" id="swiper-image-2" alt="slider image 2">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="images/slider-img-3.jpg" id="swiper-image-3" alt="slider image 3">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="images/silder-img-4.jpg" id="swiper-image-4" alt="slider image 4">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- main section -->
+    <main>
+        <!-- count down for PC view  -->
+        <div class="container d-none d-lg-block">
+            <div class="row">
+                <div class="divider mb-5">
+                    <h4>جشنواره استثنایی</h4>
+                </div>
+                <h1 class="mb-5 mt-3 h4 text-center">جشنواره آخر سال بر روی تمامی اجناس ! فرست استثنایی با 70 % تخفیف 🎁
+                </h1>
+                <!-- count down -->
+                <div class="count-down">
+                    <div id="time" class="mb-5">
+                        <div class="cricle col-12 col-lg-3" style="--clr:#FAA844;">
+                            <div class="dots day_dot"></div>
+                            <svg>
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle cx="70" cy="70" r="70" id="dd"></circle>
+                            </svg>
+                            <div id="days">
+                                00 <br> <span>Days</span>
+                            </div>
+                        </div>
+
+                        <div class="cricle col-12 col-lg-3" style="--clr:#FAA844;">
+                            <div class="dots hr_dot"></div>
+                            <svg>
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle cx="70" cy="70" r="70" id="hh"></circle>
+                            </svg>
+                            <div id="hours">
+                                00 <br> <span>Hours</span>
+                            </div>
+                        </div>
+
+                        <div class="cricle col-12 col-lg-3" style="--clr:#FAA844;">
+                            <div class="dots min_dot"></div>
+                            <svg>
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle cx="70" cy="70" r="70" id="mm"></circle>
+                            </svg>
+                            <div id="minuts">
+                                00 <br> <span>Minuts</span>
+                            </div>
+                        </div>
+
+                        <div class="cricle col-12 col-lg-3" style="--clr:#FAA844;">
+                            <div class="dots sec_dot"></div>
+                            <svg>
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle cx="70" cy="70" r="70" id="ss"></circle>
+                            </svg>
+                            <div id="seconds">
+                                00 <br> <span>Seconds</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- side bar -->
+                <aside class="col-12 col-lg-3">
+
+                </aside>
+                <div class="col-12 col-lg-9"></div>
+            </div>
+        </div>
+        <!-- product section -->
+        <div class="container">
+            <div class="row">
+                <div class="divider">
+                    <h2 class="h4 mahsul px-4 d-inline-block m-2">محصولات</h2>
+                </div>
+                <div class="col-12 pt-5 products">
+                    <div class="row" id="productsHolder">
+                       
+                          
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </main>
+    <!-- tab bar navigation -->
+    <div class="tab-container d-lg-none">
+    <nav>
+        <a class="active" href="#">
+          <svg viewBox="0 0 100 100">
+            <g transform="translate(10 5) scale(0.8 0.9)">
+              <path d="M 0 30 v 70 h 100 v -70 l -50 -30 z" stroke="currentColor" stroke-width="10" fill="none"
+                stroke-linejoin="round" stroke-linecap="round" />
+            </g>
+          </svg>
+          <span>
+            Home
+          </span>
+        </a>
+      
+        <a href="#">
+          <svg viewBox="0 0 100 100">
+            <g transform="translate(5 5) scale(0.9 0.9)">
+              <path d="M 50 35 a 20 20 0 0 1 50 0 q 0 25 -50 60 q -50 -35 -50 -60 a 25 25 0 0 1 50 0" stroke="currentColor"
+                stroke-width="10" fill="none" stroke-linejoin="round" stroke-linecap="round" />
+            </g>
+          </svg>
+          <span>
+            Likes
+          </span>
+        </a>
+      
+        <a href="#" class="d-none d-sm-block">
+          <svg viewBox="0 0 100 100">
+            <g transform="translate(5 5) scale(0.9 0.9)">
+              <circle cx="45" cy="38" r="38" stroke="currentColor" stroke-width="10" fill="none" />
+              <line x1="66" y1="65" x2="100" y2="100" stroke="currentColor" stroke-width="10" />
+            </g>
+          </svg>
+          <span>
+            Search
+          </span>
+        </a>
+      
+        <a href="register.html">
+          <svg viewBox="0 0 100 100">
+            <g transform="translate(5 5) scale(0.9 0.9)">
+              <circle cx="50" cy="35" r="18" stroke="currentColor" stroke-width="10" fill="none" />
+              <rect x="15" y="75" width="70" height="50" rx="25" stroke="currentColor" stroke-width="10" fill="none" />
+            </g>
+          </svg>
+          <span>
+            Profile
+          </span>
+        </a>
+      </nav>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
