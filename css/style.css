@@ -1,1 +1,336 @@
-/*css file*/
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+}
+body {
+    font-family: 'Vazirmatn', sans-serif;
+    color: #3d3c3c !important;
+    background: #f4f4f4 !important;
+}
+.row{
+    align-items: center;
+}
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #3d3c3c
+}
+/************PC View*****************/
+
+.pc-view>div:nth-child(2) ul {
+    display: flex;
+    justify-content: center;
+
+}
+
+.pc-view>div:nth-child(2) ul li {
+    padding-left: 35px;
+    padding-top: 10px;
+}
+/**********hover items**************/
+.list-container a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+.list-container a::after {
+  position: absolute;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #FAA844;
+  bottom: -4px;
+  transform: scale(0, 1);
+  transition: transform 0.3s;
+  transform-origin: right top;
+}
+.list-container a:hover::after {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+@media (max-width:992px) {
+  .pc-view> div:first-child{
+    text-align: center;
+  }
+}
+/*********login - search & cart section**************/
+.pc-view>div:last-child i{
+  font-size: 24px;
+}
+
+/**********add border bottom for header and products divider**************/
+.header-container > div:first-child , .divider{
+  border-bottom: 3px solid #faa8444f;
+  padding-bottom: 22px;
+}
+/****************slider**************************/
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-1{
+  margin-top: 30px;
+  border-radius: 20px;
+}
+/**********swiper pagination****************/
+.swiper-pagination-bullet-active{
+  background: #FAA844;
+  width: 35px;
+  height: 8px;
+  border-radius: 6px;
+}
+
+/**************main section********************/
+
+.divider{
+  margin-top: 50px;
+  height: 2px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+.divider h4{
+  position: absolute;
+  top: 8px;
+  background: #f4f4f4;
+  padding-right: 20px;
+  padding-left: 20px;
+  right: 42%;
+}
+
+/******************COUNT DOWN********************/
+
+.count-down{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#time{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 30px;
+}
+#time .cricle{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#time .cricle svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(270deg);
+}
+#time .cricle svg circle{
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke-width: 8;
+    stroke: #faa8444f;
+    stroke-linecap: round;
+    transform: translate(5px,5px);
+}
+#time .cricle svg circle:nth-child(2){
+    stroke: var(--clr);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+}
+#time div{
+    position: absolute;
+    text-align: center;
+    font-weight: 500;
+    color: #3d3c3c;
+    font-size: 1.5em;
+}
+#time div span{
+    position: absolute;
+    transform: translateX(50%) translateY(65px);
+    font-size: .35em;
+    font-weight: 300;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+#time .dots{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 1000;
+}
+
+#time .dots::before{
+    content: "";
+    position: absolute;
+    top: -3px;
+    width: 15px;
+    height: 15px;
+    background: var(--clr);
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--clr),0 0 60px var(--clr);
+}
+/**************Cards*******************/
+.card{
+  border-color: #faa84469;
+  padding: 15px;
+} 
+.btn{
+  background: #FAA844;
+  border: none;
+}
+.btn:hover{
+  background-color: #faa844ab  !important;
+}
+.card img {
+  border-radius: 15px;
+}
+/********[producs divider text***********/
+.mahsul{
+  background: #f4f4f4;
+}
+
+/*************tab bar navigation*******************/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:700");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* by default include the background of the option for the home navigation */
+.tab-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* display the anchor link side by side  */
+nav {
+  display: flex;
+  background: #fff;
+  /* considerable whitespace surrounding the navigation's items */
+  padding: 2rem 3.15rem;
+  border-radius: 0 0 30px 30px;
+  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* remove default style and slightly separate the anchor links from one another */
+a {
+  color: inherit;
+  text-decoration: none;
+  margin: 0 0.2rem;
+  /* display the svg icon and span elements side by side, vertically aligned */
+  display: flex;
+  align-items: center;
+  /* include padding for the background applied on the active item */
+  padding: 0.75rem 1.25rem;
+  border-radius: 30px;
+  /* position relative for the pseudo element */
+  position: relative;
+  /* custom properties for the colors picked up by the elements when clicked (and updated for each link in the script) */
+  --hover-bg: #5b37b720;
+  --hover-c: #5b37b7;
+}
+
+/* include considerable negative margin to have the svg icon overlapping with the span element */
+a svg {
+  margin-right: -2.5rem;
+  width: 25px;
+  height: 25px;
+  pointer-events: none;
+  /* transition for the change in margin */
+  transition: margin 0.2s ease-out;
+}
+/* by default hide the span element */
+a span {
+  opacity: 0;
+  visibility: hidden;
+  font-size: 0.9rem;
+  margin-left: 0.9rem;
+}
+/* include with a pseudo element relative to the anchor link a circle, with a fixed with and height */
+a:before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  /* positioned to the left of the anchor link and scaled to 0 */
+  transform: translate(0%, -50%) scale(0);
+  visibility: visible;
+  opacity: 1;
+}
+/* when active */
+/* specify the colors dictated by the custom properties */
+a.active {
+  background: var(--hover-bg);
+  color: var(--hover-c);
+}
+/* using the color specified by the then updated custom property show the circle of the pseudo element increasing its size and highlighting it momentarily */
+a.active:before {
+  background: var(--hover-c);
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0%, -50%) scale(2);
+  /* transition only when the class is applied */
+  transition: all 0.4s ease-out;
+}
+/* remove the margin applied to the svg to make it overlay atop the anchor link */
+a.active svg {
+  margin-right: 0;
+}
+/* show the span element */
+a.active span {
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.2s ease-out;
+}
+
+/* on smaller viewports show the navigation bar on the side, attached to the left of the screen */
+@media (max-width: 500px) {
+  nav {
+    justify-self: start;
+    border-radius: 30px 30px 0 0;
+    padding: 2rem 1.15rem 2rem 0.75rem;
+  }
+  /* change the margin separating the anchor link elements now dividing the elements vertically */
+  nav a {
+    margin: 4px 0;
+  }
+  /* remove the negative margin from the svg elements, as the width is to be taken in full */
+  nav svg {
+    margin: 0;
+  }
+}
+@media screen {
+  
+}
